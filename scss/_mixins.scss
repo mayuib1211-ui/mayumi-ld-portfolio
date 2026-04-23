@@ -1,0 +1,36 @@
+@use 'variables' as *;
+
+// ボタン（「詳しく見る」「全部見る」共通）
+@mixin btn-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: $color-accent;
+  font-family: $font-en;
+  font-size: 0.8125rem;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 3rem;
+    height: 1px;
+    background: currentColor;
+    transition: width 0.35s ease;
+  }
+
+  &:hover::after {
+    width: 4.25rem;
+  }
+}
+
+@mixin sp {
+  @media (max-width: $bp-mobile) {
+    @content;
+  }
+}

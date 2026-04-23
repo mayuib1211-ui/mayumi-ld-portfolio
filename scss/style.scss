@@ -1,0 +1,16 @@
+// Variables & Mixins（他のパーシャルより先に読み込む）
+@use 'variables' as *;
+@use 'mixins' as *;
+
+// Base & Shared
+@use 'base';
+@use 'animation';
+
+// Sections
+@use 'header';
+@use 'hero';
+@use 'message';
+@use 'works';
+@use 'about';
+@use 'contact';
+@use 'footer';

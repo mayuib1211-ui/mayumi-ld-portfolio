@@ -1,0 +1,86 @@
+@use 'variables' as *;
+
+.footer {
+  background: $color-bg;
+  border-top: 1px solid $color-border;
+  padding: 2.5rem 0 1.75rem;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.75rem;
+
+    @media (max-width: $bp-mobile) {
+      flex-direction: column;
+      gap: 1.5rem;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &__logo {
+    font-family: $font-en;
+    font-size: 1.125rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: $color-text-main;
+  }
+
+  &__nav-list {
+    display: flex;
+    gap: 1.75rem;
+    flex-wrap: wrap;
+
+    @media (max-width: $bp-mobile) {
+      justify-content: center;
+      gap: 1.125rem;
+    }
+
+    a {
+      font-size: 0.75rem;
+      color: $color-text-sub;
+      letter-spacing: 0.05em;
+      transition: color 0.2s;
+
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.125rem;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+
+      transition: opacity 0.2s;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+
+    img {
+      display: inline;
+      width: 1.85rem;
+      height: 1.85rem;
+    }
+  }
+
+  &__bottom {
+    padding-top: 1.25rem;
+    text-align: center;
+  }
+
+  &__copy {
+    font-size: 0.6875rem;
+    color: #aaaaaa;
+    letter-spacing: 0.05em;
+  }
+}

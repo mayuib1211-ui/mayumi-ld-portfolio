@@ -1,0 +1,140 @@
+@use 'variables' as *;
+
+.hero {
+  position: sticky; // ← relativeからstickyに変更
+  top: 0; // ← 追加
+  height: 100vh;
+  min-height: 31.25rem;
+  overflow: hidden;
+  z-index: 0; // ← 追加
+  background: $color-bg;
+
+  // ②背景写真（右25%余白）
+  &__bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 25%;
+    z-index: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    @media (max-width: $bp-mobile) {
+      inset: 0;
+    }
+  }
+
+  // ③テキスト：右寄り中央配置
+  &__content {
+    position: absolute;
+    right: 8%;
+    top: 65%;
+    transform: translateY(-50%);
+    z-index: 1;
+
+    @media (max-width: $bp-mobile) {
+      right: auto;
+      left: $pad-x-sp;
+      top: auto;
+      bottom: 5rem;
+      transform: none;
+    }
+  }
+
+  // Linor Design ラベル + 下線
+  &__label {
+    font-family: $font-en;
+    font-size: 1.6rem;
+    letter-spacing: 0.22em;
+    color: $color-text-sub;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0.5px;
+      background: rgba(136, 136, 136, 0.5);
+    }
+  }
+
+  &__portfolio-wrap {
+    max-width: 32.5rem;
+
+    @media (max-width: $bp-mobile) {
+      max-width: 16.25rem;
+    }
+  }
+
+  &__portfolio-svg {
+    width: 100%;
+    height: auto;
+  }
+
+  // スクロールインジケーター（右下）
+  // グラデーション: #F9820C 55% → #FEF0BB 23%（添付カラーより）
+  &__scroll {
+    position: absolute;
+    bottom: 2.5rem;
+    right: 3.75rem;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: $bp-mobile) {
+      right: 1.25rem;
+      bottom: 1.5rem;
+    }
+  }
+
+  &__scroll-text {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-family: $font-en;
+    font-size: 0.625rem;
+    letter-spacing: 0.2em;
+    color: rgba(51, 51, 51, 0.55);
+    margin-bottom: 0.625rem;
+  }
+
+  &__scroll-line {
+    position: relative;
+    width: 1px;
+    height: 3.5rem;
+    background: rgba(154, 92, 56, 0.12); // 薄いベーストラック
+    margin-bottom: -1.1875rem; // サークル半径分めり込ませて先端を中心に合わせる
+    z-index: 1;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(154, 92, 56, 0.55), rgba(154, 92, 56, 0.1));
+      animation: scrollbar 2s ease-in-out infinite;
+    }
+  }
+
+  &__scroll-circle {
+    width: 2.375rem;
+    height: 2.375rem;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2; // ラインの上に重なる
+    background: linear-gradient(135deg,
+        rgba(249, 130, 12, 0.55) 3%,
+        rgba(254, 240, 187, 0.85) 100%);
+  }
+}

@@ -1,0 +1,21 @@
+// Colors
+$color-bg:           #FCFCFC;
+$color-text-main:    #333333;
+$color-text-sub:     #888888;
+$color-text-body:    #555555;
+$color-accent:       #9A5C38;
+$color-accent-light: #c4956a;
+$color-border:       rgba(154, 92, 56, 0.12);
+
+// Fonts
+$font-en:     'Playfair Display', serif;
+$font-script: 'Grape Nuts', cursive;
+$font-jp:     'Noto Sans JP', sans-serif;
+
+// Layout（幅制御は .wrapper に一本化）
+$pad-x-sp:      1.25rem;  // 20px — hero SP のみ使用
+$section-py:    8rem;  // 100px
+$section-py-sp: 3.75rem;  // 60px
+
+// Breakpoints
+$bp-mobile: 768px;

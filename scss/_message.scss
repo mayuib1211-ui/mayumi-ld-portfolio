@@ -1,0 +1,116 @@
+@use 'variables' as *;
+
+.message {
+  position: relative;
+  padding: $section-py 0 0;
+  overflow: hidden;
+
+  @media (max-width: $bp-mobile) {
+    padding: $section-py-sp 0 0;
+  }
+
+  // 右側の装飾ブロック
+  &__deco {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 40rem;
+    pointer-events: none;
+
+    @media (max-width: $bp-mobile) {
+      width: 62%;
+      height: 30rem;
+    }
+  }
+
+  &__deco-block {
+    position: absolute;
+    border-radius: 0.125rem;
+  }
+
+  &__deco-block--main {
+    top: 12rem;
+    right: 5rem;
+    width: 88%;
+    height: 100%;
+    background: linear-gradient(158deg,
+        rgba(243, 122, 0, 0.308) 3%,
+        rgba(254, 240, 187, 0.5) 55%,
+        rgba(246, 242, 242, 0.55) 100%);
+
+
+    @media (max-width: $bp-mobile) {
+      width: 90%;
+      top: 10rem;
+      right: 0;
+    }
+  }
+
+  &__deco-block--sub {
+    top: 7rem;
+    right: 0;
+    width: 58%;
+    height: 72%;
+    background: linear-gradient(158deg,
+        rgba(246, 242, 242, 0.65) 60%,
+        rgba(255, 255, 255, 0.7) 100%);
+  }
+
+  .wrapper {
+    position: relative;
+    z-index: 1;
+    padding-bottom: $section-py;
+
+    @media (max-width: $bp-mobile) {
+      padding-bottom: $section-py-sp;
+    }
+  }
+
+  &__body {
+    width: 65%;
+    margin: 0 auto;
+    padding-block: 6rem;
+    background: #fdf8f4d2;
+    // background: #f5f0eb;
+
+
+    @media (max-width: $bp-mobile) {
+      width: 100%;
+    }
+
+  }
+
+  &__heading {
+    width: 70%;
+    margin: 0 auto;
+    font-family: $font-en;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.75;
+    color: $color-accent;
+    margin-bottom: 4rem;
+
+    @media (max-width: $bp-mobile) {
+      font-size: 1.25rem;
+      margin-bottom: 1.75rem;
+    }
+  }
+
+  &__text {
+    width: 70%;
+    margin: 0 auto;
+
+    p {
+      font-size: 0.8125rem;
+      color: $color-text-body;
+
+      line-height: 2;
+      margin-bottom: 1.25rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

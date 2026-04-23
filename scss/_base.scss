@@ -1,0 +1,268 @@
+@use 'variables' as *;
+@use 'mixins' as m;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-size: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-jp;
+  font-size: 0.875rem;
+  line-height: 1.8;
+  color: $color-text-main;
+  background-color: $color-bg;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  font-family: $font-jp;
+}
+
+.message,
+.works,
+.about,
+.contact {
+  position: relative;
+  z-index: 1;
+  background: $color-bg;
+}
+
+// ===== トップへ戻るボタン =====
+.page-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 3.75rem;
+  width: 2.375rem;
+  height: 2.375rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg,
+      rgba(249, 130, 12, 0.55) 3%,
+      rgba(254, 240, 187, 0.85) 100%);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  opacity: 0;
+  transform: translateY(0.75rem);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-top: 1.5px solid #fff;
+    border-right: 1.5px solid #fff;
+    transform: rotate(-45deg);
+  }
+
+  &:hover {
+    opacity: 0.75;
+  }
+}
+
+// 共通セクションタイトルクラス
+.section-title {
+  margin-bottom: 6rem;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .line {
+    width: 0;
+    height: 0.5px;
+    background: $color-accent;
+    transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+    flex-shrink: 0;
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .en {
+    font-family: $font-en;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: $color-text-main;
+    opacity: 0;
+    transform: translateX(-0.75rem);
+    transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.7s,
+      transform 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.7s;
+  }
+
+  .ja {
+    display: block;
+    font-size: 0.8rem;
+    color: $color-accent;
+    letter-spacing: 0.15em;
+    opacity: 0;
+    transform: translateX(-0.5rem);
+    transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.9s,
+      transform 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.9s;
+  }
+
+  &.active {
+    .line {
+      width: 3rem;
+    }
+
+    .en {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .ja {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+.contact .section-title {
+  margin-bottom: 4rem;
+}
+
+// ===== ラッパー =====
+.wrapper {
+  max-width: 1200px;
+  padding-inline: 4rem;
+  margin: 0 auto;
+
+  @include m.sp {
+    padding-inline: 2rem;
+  }
+}
+
+// 共通ボタン
+.btn-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: $color-accent;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 3rem;
+    height: 1px;
+    background: currentColor;
+    transition: width 0.35s ease;
+  }
+
+  &:hover::after {
+    width: 3.5rem;
+  }
+}
+
+.btn-arrow-scond {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  color: $color-accent;
+  font-family: $font-en;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  cursor: pointer;
+
+  &__text {
+    margin-right: 0.75rem;
+  }
+
+  &__line {
+    display: block;
+    position: relative;
+    width: 3.5rem;
+    height: 1px;
+    background: rgba(154, 92, 56, 0.12); // 薄いベーストラック
+    margin-right: -1.1875rem;
+    z-index: 1;
+    transition: width 0.35s ease;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right,
+          rgba(154, 92, 56, 0.1), rgba(154, 92, 56, 0.55));
+      animation: linebar 2s ease-in-out infinite; // ← linebarに変更
+    }
+  }
+
+  &:hover &__line {
+    width: 3.5rem;
+  }
+
+  &__circle {
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg,
+        rgba(249, 130, 12, 0.55) 3%,
+        rgba(254, 240, 187, 0.85) 100%);
+  }
+
+  &:hover &__line {
+    width: 3.8rem;
+  }
+}

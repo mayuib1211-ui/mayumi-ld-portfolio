@@ -1,0 +1,183 @@
+@use 'variables' as *;
+
+.contact {
+  background: $color-bg;
+  padding: $section-py 0 0;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 4rem;
+
+  @media (max-width: $bp-mobile) {
+    padding: $section-py-sp 0;
+  }
+
+
+  &__deco-block {
+    position: absolute;
+    border-radius: 0.125rem;
+  }
+
+  &__deco-block--main {
+    top: 5rem;
+    left: 0rem;
+    width: 90%;
+    height: 85%;
+    background: linear-gradient(158deg,
+        rgba(243, 122, 0, 0.219) 3%,
+        rgba(254, 227, 187, 0.438) 55%,
+        rgba(246, 242, 242, 0.418) 100%);
+    z-index: 10;
+
+    @media (max-width: $bp-mobile) {
+      top: 0;
+    }
+  }
+
+  &__deco-block--sub {
+    top: 10rem;
+    right: 0;
+    width: 90%;
+    height: 85%;
+    background: linear-gradient(158deg,
+        rgba(247, 240, 240, 0.65) 60%,
+        rgba(231, 231, 231, 0.445) 100%);
+
+    @media (max-width: $bp-mobile) {
+      top: 7rem;
+    }
+  }
+
+
+
+  .wrapper {
+    width: 95%;
+    text-align: center;
+    position: relative;
+    z-index: 20;
+    background: #fffdfbc7;
+    padding-bottom: 4rem;
+    margin-bottom: 4rem;
+
+    .section-title {
+      justify-content: center;
+    }
+  }
+
+  .section-title {
+    padding-top: 4rem;
+  }
+
+  &__lead {
+    font-size: 0.875rem;
+    color: $color-text-body;
+    line-height: 2;
+    margin-bottom: 3rem;
+  }
+
+  &__form {
+    max-width: 38rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    text-align: left;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__label-field {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: $color-text-sub;
+  }
+
+  &__required {
+    color: $color-accent;
+    margin-left: 0.25rem;
+  }
+
+  &__input,
+  &__textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #d8d0c8;
+    padding: 0.625rem 0;
+    font-size: 0.9375rem;
+    font-family: $font-jp;
+    color: $color-text-main;
+    outline: none;
+    width: 100%;
+    transition: border-bottom-color 0.25s ease;
+
+    &:focus {
+      border-bottom-color: $color-accent;
+    }
+
+    &::placeholder {
+      color: rgba(136, 136, 136, 0.4);
+    }
+  }
+
+  &__textarea {
+    resize: vertical;
+    min-height: 8rem;
+    line-height: 1.8;
+    border: 1px solid #d8d0c8;
+    padding: 0.75rem 1rem;
+
+    &:focus {
+      border-color: $color-accent;
+    }
+  }
+
+  &__privacy {
+    label {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      color: $color-text-sub;
+      cursor: pointer;
+    }
+
+    a {
+      color: $color-accent;
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+    }
+
+    input[type="checkbox"] {
+      width: 1rem;
+      height: 1rem;
+      accent-color: $color-accent;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+  }
+
+  &__btn {
+    display: block;
+    margin: 0.5rem auto 0;
+    padding: 1rem 4rem;
+    background: transparent;
+    color: $color-accent;
+    border: none;
+    font-family: $font-en;
+    font-size: 0.8125rem;
+    letter-spacing: 0.12em;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid $color-accent;
+
+    &:hover {
+     opacity: 0.7;
+  
+    }
+  }
+}

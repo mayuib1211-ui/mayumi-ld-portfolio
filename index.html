@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linor Design | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Grape+Nuts&family=Noto+Sans+JP:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <h1><a href="#" class="header__logo">LOGO</a></h1>
+
+      <nav class="header__nav" id="nav">
+        <ul class="header__nav-list">
+          <li><a href="#">Home</a></li>
+          <li><a href="#message">メッセージ</a></li>
+          <li><a href="#works">制作実績</a></li>
+          <li><a href="#about">私について</a></li>
+          <li><a href="#contact" class="header__contact-btn">お問合せ</a></li>
+        </ul>
+      </nav>
+
+      <button class="header__hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <!-- 背景写真：全幅・全高 -->
+      <div class="hero__bg">
+        <img src="https://placehold.co/1920x1080/f5f0eb/c8c0b8?text=Photo" alt="Mayumi">
+      </div>
+
+      <!-- テキスト：写真の上に重ねて左下配置 -->
+      <div class="hero__content">
+        <p class="hero__label">Linor Design</p>
+        <div class="hero__portfolio-wrap">
+          <img src="images/svg/Portfolio.svg" alt="Portfolio" class="hero__portfolio-svg">
+        </div>
+      </div>
+
+      <!-- スクロールインジケーター：右下 -->
+      <div class="hero__scroll" aria-hidden="true">
+        <span class="hero__scroll-text">scroll</span>
+        <div class="hero__scroll-line"></div>
+        <div class="hero__scroll-circle"></div>
+      </div>
+    </section>
+
+    <!-- ===== MESSAGE ===== -->
+    <section class="message" id="message">
+
+      <!-- 右側の装飾ブロック -->
+      <div class="message__deco" aria-hidden="true">
+        <div class="message__deco-block message__deco-block--main"></div>
+        <div class="message__deco-block message__deco-block--sub"></div>
+      </div>
+
+      <div class="wrapper">
+        <div class="section-title js-section-title">
+          <div class="section-title__inner">
+            <span class="line"></span>
+            <div class="section-title__text">
+              <h2 class="en">Message</h2>
+              <span class="ja">メッセージ</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="message__body fade-up">
+          <h3 class="message__heading">
+            想いを共有して、想いが重なり、<br>
+            人と人をつなぐデザインを。
+          </h3>
+          <div class="message__text">
+            <p>テキストとテキストとテキストとテキストとテキストとテキストとテキストとテキストテキストとテキストとテキスト</p>
+            <p>テキストとテキストとテキストとテキストとテキストとテキストとテキスト1キスとテキストとテキストとテキストとテキストとテキスト1キスと</p>
+            <p>テキストとテキストとテキストとテキストキス
+              テキストとテキストとテキストとテキストとテキストとテキストとテキストとテキスト
+              1キスとテキストとテキストとテキストとテキストとテキストとテキスト1キスと</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- アニメーション①：波線 -->
+      <div class="wave-container js-wave">
+        <svg viewBox="0 0 2600 400" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="wg1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#9A5C38" stop-opacity="0.85" />
+              <stop offset="35%" stop-color="#c4956a" stop-opacity="0.7" />
+              <stop offset="60%" stop-color="#d8d0c8" stop-opacity="0.7" />
+              <stop offset="100%" stop-color="#a8a8a0" stop-opacity="0.9" />
+            </linearGradient>
+            <linearGradient id="wg2" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#9A5C38" stop-opacity="0.6" />
+              <stop offset="35%" stop-color="#c4956a" stop-opacity="0.5" />
+              <stop offset="60%" stop-color="#d8d0c8" stop-opacity="0.5" />
+              <stop offset="100%" stop-color="#a8a8a0" stop-opacity="0.7" />
+            </linearGradient>
+          </defs>
+          <path fill="none" stroke="url(#wg1)" stroke-width="0.9" stroke-dasharray="8000" stroke-dashoffset="8000"
+            class="wave-line" d="M0,60 C480,70 800,230 1300,180 C1700,150 2100,100 2600,130" />
+
+          <path fill="none" stroke="url(#wg2)" stroke-width="0.6" stroke-dasharray="8000" stroke-dashoffset="8000"
+            class="wave-line2" d="M0,230 C480,210 800,80 1300,180 C1700,210 2100,260 2600,220" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- ===== WORKS ===== -->
+    <section class="works" id="works">
+      <div class="wrapper">
+
+        <div class="section-title js-section-title">
+          <div class="section-title__inner">
+            <span class="line"></span>
+            <div class="section-title__text">
+              <h2 class="en">Works</h2>
+              <span class="ja">制作実績</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="works__grid" id="works-grid">
+
+          <article class="works__item fade-up" data-category="web">
+            <a href="https://mayuib1211-ui.github.io/paw-link/" target="_blank" rel="noopener" class="works__item-link">
+              <div class="works__item-img">
+                <img src="images/works/hp01.webp" alt="保護ねこサイト">
+              </div>
+              <div class="works__item-body">
+                <div class="works__inner">
+                  <p class="works__item-category">website</p>
+                  <h3 class="works__item-title">保護ねこサイト（自主制作）</h3>
+                  <p class="works__item-tags">direction / Design / Coding</p>
+                  <p class="works__item-period">2026.02 ｜ Figma / VS Code</p>
+                </div>
+                <span class="works__item-more btn-arrow">サイトを見る</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="works__item fade-up" data-category="web">
+            <a href="https://mayuib1211-ui.github.io/pronavi-deploy/" target="_blank" rel="noopener"
+              class="works__item-link">
+              <div class="works__item-img">
+                <img src="images/works/hp02.webp" alt="プログラミングスクールサイト">
+              </div>
+              <div class="works__item-body">
+                <div class="works__inner">
+                  <p class="works__item-category">website</p>
+                  <h3 class="works__item-title">プログラミングスクールサイト（ハッカソン）</h3>
+                  <p class="works__item-tags">direction / Design / Coding</p>
+                  <p class="works__item-period">2025.12 ｜ Figma / VS Code</p>
+                </div>
+                <span class="works__item-more btn-arrow">サイトを見る</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="works__item fade-up" data-category="web">
+            <a href="https://mayuib1211-ui.github.io/portfolio-site/" target="_blank" rel="noopener"
+              class="works__item-link">
+              <div class="works__item-img">
+                <img src="images/works/hp03.webp" alt="チームポートフォリオ">
+              </div>
+              <div class="works__item-body">
+                <div class="works__inner">
+                  <p class="works__item-category">website</p>
+                  <h3 class="works__item-title">チームポートフォリオ</h3>
+                  <p class="works__item-tags">direction / Design / Coding</p>
+                  <p class="works__item-period">2026.04 ｜ Figma / Photoshop / VS Code</p>
+                </div>
+                <span class="works__item-more btn-arrow">サイトを見る</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="works__item fade-up" data-category="lp">
+            <a href="#" class="works__item-link">
+              <div class="works__item-img">
+                <img src="..." alt="LPデザイン">
+              </div>
+              <div class="works__item-body">
+                <div class="works__inner">
+                  <p class="works__item-category">LP</p>
+                  <h3 class="works__item-title">LPデザイン</h3>
+                  <p class="works__item-tags">Design / Coding</p>
+                </div>
+                <span class="works__item-more btn-arrow">サイトを見る</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="works__item fade-up" data-category="banner">
+            <div class="works__item-img">
+              <img src="images/works/banner01.webp" alt="ペットフードバナー">
+            </div>
+            <div class="works__item-body">
+              <div class="works__inner">
+                <p class="works__item-category">banner</p>
+                <h3 class="works__item-title">ペットフード（自主制作）</h3>
+                <p class="works__item-tags">Design</p>
+                <p class="works__item-period">2026.03 ｜ Photoshop</p>
+              </div>
+            </div>
+          </article>
+
+
+          <article class="works__item fade-up" data-category="banner">
+            <div class="works__item-img">
+              <img src="images/works/banner03.webp" alt="タクシー運転手募集バナー">
+            </div>
+            <div class="works__item-body">
+              <div class="works__inner">
+                <p class="works__item-category">banner</p>
+                <h3 class="works__item-title">タクシー運転手募集（コンペ採用作品）</h3>
+                <p class="works__item-tags">Design</p>
+                <p class="works__item-period">2026.03 ｜ Photoshop</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="works__item fade-up" data-category="banner">
+
+            <div class="works__item-img">
+              <img src="images/works/banner02.webp" alt="健康診断バナー">
+            </div>
+            <div class="works__item-body">
+              <div class="works__inner">
+                <p class="works__item-category">banner</p>
+                <h3 class="works__item-title">健康診断（自主制作）</h3>
+                <p class="works__item-tags">Design</p>
+                <p class="works__item-period">2026.03 ｜ Photoshop</p>
+              </div>
+            </div>
+          </article>
+
+
+
+        </div>
+
+        <div class="works__more fade-up">
+          <a href="works/" class="btn-arrow-scond">
+            <span class="btn-arrow-scond__text">全部見る</span>
+            <span class="btn-arrow-scond__line"></span>
+            <span class="btn-arrow-scond__circle"></span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- アニメーション①：波線（2本目） -->
+      <div class="wave-container js-wave">
+        <svg viewBox="0 0 2600 400" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="wg3" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#9A5C38" stop-opacity="0.85" />
+              <stop offset="35%" stop-color="#c4956a" stop-opacity="0.7" />
+              <stop offset="60%" stop-color="#d8d0c8" stop-opacity="0.7" />
+              <stop offset="100%" stop-color="#a8a8a0" stop-opacity="0.9" />
+            </linearGradient>
+            <linearGradient id="wg4" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#9A5C38" stop-opacity="0.6" />
+              <stop offset="35%" stop-color="#c4956a" stop-opacity="0.5" />
+              <stop offset="60%" stop-color="#d8d0c8" stop-opacity="0.5" />
+              <stop offset="100%" stop-color="#a8a8a0" stop-opacity="0.7" />
+            </linearGradient>
+          </defs>
+          <path fill="none" stroke="url(#wg1)" stroke-width="0.9" stroke-dasharray="8000" stroke-dashoffset="8000"
+            class="wave-line" d="M0,60 C480,70 800,230 1300,180 C1700,150 2100,100 2600,130" />
+
+          <path fill="none" stroke="url(#wg2)" stroke-width="0.6" stroke-dasharray="8000" stroke-dashoffset="8000"
+            class="wave-line2" d="M0,230 C480,210 800,80 1300,180 C1700,210 2100,260 2600,220" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about" id="about">
+      <div class="wrapper">
+
+        <div class="section-title js-section-title">
+          <div class="section-title__inner">
+            <span class="line"></span>
+            <div class="section-title__text">
+              <h2 class="en">About</h2>
+              <span class="ja">私について</span>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="about__body fade-up">
+          <div class="about__text">
+            <h2 class="about__name">Mayumi</h2>
+            <div class="about__description">
+              <p>子育てをしながら、Webデザイナーとして活動しています。
+                限られた時間の中でも丁寧に寄り添い、想いや魅力がしっかり伝わるデザインを大切にしています。</p>
+              <p>Linor Design（リノアデザイン）は「思いを形に、結果につなげる」をモットーに、クライアントさんの想いを丁寧にヒアリングしながら制作しています。
+                現在、LP制作・Webデザイン・バナー等を中心に承っております。
+                まずはお気軽にご相談ください。</p>
+            </div>
+
+            <div class="about__more fade-up">
+              <a href="works/" class="btn-arrow-scond">
+                <span class="btn-arrow-scond__text">全部見る</span>
+                <span class="btn-arrow-scond__line"></span>
+                <span class="btn-arrow-scond__circle"></span>
+              </a>
+            </div>
+          </div>
+          <div class="about__image">
+            <img src="https://placehold.co/400x500/e8e0d8/b0a898?text=Photo" alt="Mayumi">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact" id="contact">
+      <div class="contact__deco" aria-hidden="true">
+        <div class="contact__deco-block contact__deco-block--main"></div>
+        <div class="contact__deco-block contact__deco-block--sub"></div>
+      </div>
+      <div class="wrapper fade-up">
+
+        <div class="section-title js-section-title">
+          <span class="line"></span>
+          <p class="en">Contact</p>
+          <h2 class="ja">お問い合わせ</h2>
+        </div>
+
+        <p class="contact__lead">
+          ご覧いただきありがとうございます。<br>
+          お見積りやご相談だけでも構いません。お気軽にご相談ください。
+        </p>
+
+        <form class="contact__form fadein" style="transition-delay: 0s" action="https://formspree.io/f/xeevebpj"
+          method="POST">
+
+          <!-- お名前 -->
+          <div class="contact__field">
+            <label class="contact__label-field" for="name">お名前<span class="contact__required">*</span></label>
+            <input class="contact__input" type="text" id="name" name="name" required>
+          </div>
+
+          <!-- 会社名 -->
+          <div class="contact__field">
+            <label class="contact__label-field" for="company">会社名</label>
+            <input class="contact__input" type="text" id="company" name="company">
+          </div>
+
+          <!-- メールアドレス -->
+          <div class="contact__field">
+            <label class="contact__label-field" for="email">メールアドレス<span class="contact__required">*</span></label>
+            <input class="contact__input" type="email" id="email" name="email" required>
+          </div>
+
+          <!-- お問い合わせ内容 -->
+          <div class="contact__field">
+            <label class="contact__label-field" for="message">お問い合わせ内容</label>
+            <textarea class="contact__textarea" id="message" name="message" rows="6"></textarea>
+          </div>
+
+          <!-- プライバシーポリシー -->
+          <div class="contact__privacy">
+            <label><input type="checkbox" name="privacy" required>
+              <a href="privacy.html" target="_blank">プライバシーポリシー</a>に同意する
+            </label>
+          </div>
+
+          <button class="contact__btn" type="submit">送信する</button>
+          <!-- <button class="contact__btn" type="submit"><span>送信する</span></button> -->
+
+        </form>
+      </div>
+
+    </section>
+
+    <!-- ===== BANNER MODAL ===== -->
+    <div class="modal" id="banner-modal" role="dialog" aria-modal="true" aria-label="バナー拡大表示">
+      <div class="modal__overlay" id="modal-overlay"></div>
+      <div class="modal__content">
+        <button class="modal__close" id="modal-close" aria-label="閉じる">
+          <span></span>
+          <span></span>
+        </button>
+        <div class="modal__img-wrap">
+          <img id="modal-img" class="modal__img" alt="">
+        </div>
+        <p class="modal__caption" id="modal-caption"></p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer__top">
+        <a href="#" class="footer__logo">LOGO</a>
+
+        <nav>
+          <ul class="footer__nav-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#message">メッセージ</a></li>
+            <li><a href="#works">制作実績</a></li>
+            <li><a href="#about">私について</a></li>
+            <li><a href="#contact">お問い合わせ</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer__social">
+          <a href="https://x.com/mayumi_codes" target="_blank" rel="noopener" aria-label="X (Twitter)">
+            <img src="images/svg/icons_x.svg" alt="X">
+          </a>
+          <a href="https://www.instagram.com/linor_mayumi/" target="_blank" rel="noopener" aria-label="Instagram">
+            <img src="images/svg/icons_Instagram.svg" alt="Instagram">
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2024 Mayumi. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="page-top" id="page-top" aria-label="トップへ戻る"></button>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
