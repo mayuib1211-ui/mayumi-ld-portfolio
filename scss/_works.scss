@@ -3,10 +3,10 @@
 // works/index.html 用ページバナー
 .page-banner {
   background: $color-bg;
-  padding: 8rem 0 3rem;
+  padding: 8rem 0 0;
 
   @media (max-width: $bp-mobile) {
-    padding: 6rem 0 2rem;
+    padding: 6rem 0 0;
   }
 
   .section-title {
@@ -16,10 +16,10 @@
 
 // works/index.html 用：top padding なし
 .works--full {
-  padding-top: 2rem;
+  padding-top: 0;
 
   @media (max-width: $bp-mobile) {
-    padding-top: 1rem;
+    padding-top: 0;
   }
 }
 
@@ -55,7 +55,6 @@
     display: flex;
     gap: 1.5rem;
     align-items: center;
-    padding-top: 0.5rem;
     margin-bottom: 4rem;
   }
 
